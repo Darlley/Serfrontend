@@ -1,0 +1,304 @@
+/*
+ * MOBILE FIRST
+ */
+
+body#ex06{
+    font-family: sans-serif;
+    
+    h1, h2, h3, h4, h5, h6{
+        font-family: "Oxygen", arial;
+    }
+    
+    .btn{
+        display: inline-block;
+        padding: .9em 2.5em;
+        background-color: #58c4c4;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #37a0a0;
+        }
+    }
+
+    .top-content-icon{
+        height: 5em;
+        display: none;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .top-header{
+        text-align: center;
+
+        .top-header-logo{
+            margin: .5em;
+        }
+        
+        .top-nav{
+            background-color: #612674;
+            text-align: center;
+        
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 1em 0;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                    padding: 1em;
+                    
+                    &:hover{
+                        background-color: #7c3792;
+                    }
+                }
+            }
+        }
+    }
+
+    .top-content{
+        padding: 1em;
+        text-align: center;
+        background-color: #f6f6f6; 
+
+        .top-content-title{
+            font-size: 1.3em;
+            margin: 1.3em;
+            color: #612674;
+            text-transform: capitalize;
+        }
+        .top-content-subtitle{
+            font-size: 1em;
+            color: #a87bb7;
+        }
+    }
+
+    .middle-content{
+        text-align: center;
+        padding: 2em;
+        background-color: #f6f6f6;
+        
+        span[class^=icon]{
+            font-size: 2.5em;
+            color: #652e78;
+        }
+        .middle-content-title{
+            font-size: 1.25em;
+            color: #652e78;
+            text-transform: uppercase;
+        }
+        p{
+            line-height: 1.5;
+            color: #222;
+        }
+    }
+
+    .main-content{
+        padding: 2em;
+
+        .main-content-article{
+            margin-bottom: 3em;
+        }
+        .main-content-title{
+            letter-spacing: .2em;
+            font-weight: normal;
+            color: #652e78;
+            text-transform: uppercase;
+        }
+        .main-content-title::first-letter{
+            font-weight: bold;
+        }
+        p{
+            line-height: 1.5;
+        }
+
+    }
+
+    .hidden{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        display: block;
+    }
+
+    .footer{
+        background-color: #25303e;
+        text-align: center;
+        color: #83969f;
+        padding-bottom: 2em;
+        
+        .footer-menushare{
+            background-color: #303d4c;
+            padding: .8em;
+            margin: 0;
+            list-style: none;
+        
+            li{
+                display: inline-block;
+                margin: 0 1em;
+                
+                a{
+                    text-decoration: none;
+                    color: #83969f;
+                    font-size: 1.2em;
+
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        p{
+            padding: .5em 2em;
+        }
+        
+    }
+}
+
+/*
+ * TABLET (720px)
+ */
+@media screen and (min-width: 48.75em){
+    body#ex06{
+        .top-header{
+            margin: .5em 2em;
+
+            &:after{
+               content: '';
+               clear: both;
+               display: block;
+            } // Clearfix
+
+            .top-header-logo{
+                float: left;
+                margin: 0;
+            }
+            .top-nav{
+                float: right;
+                background-color: white;
+                width: 50%;
+                padding: .5em;
+                
+                ul{
+                    margin: 0;
+                    padding: 0;
+
+                    text-align: center;
+                    
+                    li{
+                        display: inline-block;
+
+                        a{
+                            color: #713a84;
+
+                            &:hover{
+                                background-color: initial;
+                                color:#a87bb7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .top-content{
+            background-color: #521a66;
+            
+            .top-content-title, .top-content-subtitle{
+                color: white;
+            }
+        }
+
+        .top-content-icon{
+            display: block;
+        }
+
+        // GRIDS
+        .row{
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+        
+        .col-1-4{
+            width: 44%;
+            margin: 3%;
+            float: left;
+        }
+        
+        .main-content-article {
+            
+            .btn{
+                float: right;
+            }
+            
+            &:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+            
+        }
+    }
+}
+
+/*
+ * DESKTOP (1000px)
+ */
+@media screen and (min-width: 62.5em){
+    body#ex06{
+
+        .top-content{
+            background-color: #521a66;
+            background-image: url(../img/rangehotel/bg_topo_1198x670.jpg);
+            padding-top: 15em;
+            height: 20em;     
+        }
+    
+    }
+}
+
+/*
+ * DESKTOP FULL (1024px)
+ */
+@media screen and(min-width: 74em){
+    body#ex06{
+
+        .top-content{
+            background-image: url(../img/rangehotel/bg_topo_1600x1374.jpg);
+            background-position: center top;
+            padding: 19em 20em 10em;
+        } 
+
+        .top-content-icon{
+            height: 7em;
+        }
+
+        .col-1-4{
+            width: 23%;
+            margin: 1%;
+        }
+
+        .main-content-article{
+            .btn{
+                float: none;
+            } 
+        }
+
+        .col-1-2{
+            width: 48%;
+            margin: 1%;
+            float: left;
+        }
+
+    } 
+}
