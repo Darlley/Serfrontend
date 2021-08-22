@@ -1,3 +1,5 @@
+console.log('======== EXERCÍCIO 1')
+
 //pedir para o usuário digitar um numero
 //converter para número inteiro
 var n1 = parseInt(prompt("Número 1: "));
