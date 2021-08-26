@@ -1,38 +1,40 @@
-/*
-Pedir para o usuário digitar dois números que representam os lados de um retângulo. Mostrar na tela a área total. Esse código deve ser executado quando a página é aberta e também quando clicar num botão. O que acontece se o usuário inserir um dado inválido?
-*/
 
-/*
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-    </head>
-    <body>
-        <button onclick="mostarAreaAlert(largura, altura)">mostrar área no alert</button>
-        <button onclick="mostarAreaOutput(largura, altura)">mostrar área no output</button>
-        
-        <div id="output"></div>
-        
-        <script>
-*/
-            var largura = parseFloat(prompt('Digite a largura: '));
-            var altura = parseFloat(prompt('Digite a altura: '));
-            
-            function mostarAreaAlert(){
-                var area = calcularArea(largura, altura);
-                alert('Área total: '+area)
-            }
-            function mostarAreaOutput(){
-                var area = calcularArea(largura, altura);
-                document.querySelector('#output').innerHTML = 'A Área total é: '+area;
+var output = document.querySelector('#output')
 
-            }
+var largura = parseFloat(prompt('Informe a medida da largura: '));
+if(isNaN(largura)){
+    while(isNaN(largura)){
+        largura = parseFloat(prompt('Informe a medida da largura: '));
+    }
+}
 
-            function calcularArea(l, a){
-                return  l * a;
-            }
-/*
-        </script>
-    </body>
-</html>
-*/
+var altura = parseFloat(prompt('Informe a medida da altura: '));
+if(isNaN(altura)){
+    while(isNaN(altura)){
+        altura = parseFloat(prompt('Informe a medida da altura: '));
+    }
+}
+
+
+if( largura >= 0 || altura >=0 ){
+    
+    function mostarAreaAlert(largura, altura){
+        alert("Área total: " + calcular(largura, altura));
+    }
+    function mostarAreaOutput(){
+        output.innerHTML = "Área total: " + calcular(largura, altura);
+    }
+
+}else{
+
+    if( !(largura >= 0) ){
+        largura = 0;
+    }else if( !(altura >=0) ){
+        altura = 0;
+    }
+    
+}
+
+function calcular(altura, largura){
+    return altura * largura;
+}

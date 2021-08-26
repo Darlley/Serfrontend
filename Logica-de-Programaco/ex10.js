@@ -16,32 +16,47 @@
 
         <script>
 */
+            var output = document.querySelector("#output");
+            
             var n = parseFloat(prompt("Digite um número: "));
-            numero.innerHTML = n;
 
-            function calcular(simbolo){
-                var n2 = parseFloat(prompt("Digite um número: "));
-                switch(simbolo){
-                    case '+':
-                        n += n2;
-                        break;
-                    case '-':
-                        n -= n2;
-                        break;
-                    case '*':
-                        n *= n2;
-                        break;
-                    case '/':
-                        n /= n2;
-                        break;
-                }
-                numero.innerHTML = n;
+            if(n >= 0){
+                output.innerHTML = n;
+            }else{
+                n = 0;
+                output.innerHTML = n;
             }
 
-            var output = document.querySelector("#output");
-            var mensagem = "";
+            function limpar(zerar){
+                n = zerar;
+                output.innerHTML = n;
+            }
 
-            output.innerHTML = mensagem;
+            function calcular(simbolo){
+
+                var n2 = parseFloat(prompt("Digite um número: "));
+                
+                if( n2 >= 0 ){
+                    switch(simbolo){
+                        case '+':
+                            n += n2;
+                            break;
+                        case '-':
+                            n -= n2;
+                            break;
+                        case '*':
+                            n *= n2;
+                            break;
+                        case '/':
+                            n /= n2;
+                            break;
+                    }
+                }
+
+                output.innerHTML = n;
+            }
+
+        
 /*
         </script>
     </body>

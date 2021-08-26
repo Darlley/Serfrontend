@@ -1,63 +1,34 @@
-//CALCULADORA 
+var resultado = document.querySelector("#output")
 
-/*
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <script>
-*/
-          var n = parseFloat(prompt("Digite um número: "));
-          numero.innerHTML = n;
+var numero = parseFloat(prompt("Digite um número: "));
+if(numero>0){
+  resultado.innerHTML = numero;
+}
+else{
+  numero = 0;
+  resultado.innerHTML = numero;
+}
 
-          function novo(){
-            n = parseFloat(prompt("Digite um número: "));
-            numero.innerHTML = n;
-          }
+function somar(){
+  numero += parseFloat(prompt("Digite um número: "));
+  resultado.innerHTML = numero;
+}
 
+function subtrair(){
+  numero -= parseFloat(prompt("Digite um número: "));
+  resultado.innerHTML = numero;
+}
 
-          function somar(){
-            var n2 = parseFloat(prompt("Digite um número: "));
-            n += n2;
-            numero.innerHTML = n;
-          }
+function multiplicar(){
+  numero *= parseFloat(prompt("Digite um número: "));
+  resultado.innerHTML = numero;
+}
 
-          function subtrair(){
-            var n2 = parseFloat(prompt("Digite um número: "));
-            n -= n2;
-            numero.innerHTML = n;
-          }
+function dividir(){
+  numero /= parseFloat(prompt("Digite um número: "));
+  resultado.innerHTML = numero;
+}
 
-          function multiplicar(){
-            var n2 = parseFloat(prompt("Digite um número: "));
-            n *= n2;
-            numero.innerHTML = n;
-          }
-
-          function dividir(){
-            var n2 = parseFloat(prompt("Digite um número: "));
-            n /= n2;
-            numero.innerHTML = n;
-          }
-
-          function limpar(){
-            mensagem = '';
-            numero.innerHTML = mensagem;
-          }
-
-          var output = document.querySelector("#output");
-          var mensagem = "";
-
-          output.innerHTML = mensagem;
-/*
-      <script>
-    </head>
-    <body>
-      <button onclick="novo()">NEW</button>
-      <button onclick="limpar()">C</button>
-      <button onclick="somar()">+</button>
-      <button onclick="subtrair()">-</button>
-      <button onclick="multiplicar()">*</button>
-      <button onclick="dividir()">/</button>
-    </body>
-</html>
-*/
+function limpar(){
+  resultado.innerHTML = 0;
+}
